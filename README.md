@@ -1,4 +1,5 @@
-# ikol_system_task1
+# Distance between geo coordinates Vue JS
+
 
 ## Project setup
 ```
@@ -15,10 +16,10 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### Test
 ```
-npm run lint
+npm test
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+##### Author: Radosław Makosz
+

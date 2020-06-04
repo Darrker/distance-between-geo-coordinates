@@ -43,12 +43,12 @@ class GeoCoordinates {
 
             this.calculatedCoorrdinates ={
                 start: {
-                    latitude: this._getDataFromCoordinate(startLatitude),
-                    longitude: this._getDataFromCoordinate(startLongitude),
+                    latitude:  GeoCoordinates._getDataFromCoordinate(startLatitude),
+                    longitude: GeoCoordinates._getDataFromCoordinate(startLongitude),
                 },
                 end: {
-                    latitude: this._getDataFromCoordinate(endLatitude),
-                    longitude: this._getDataFromCoordinate(endLongitude),
+                    latitude: GeoCoordinates._getDataFromCoordinate(endLatitude),
+                    longitude: GeoCoordinates._getDataFromCoordinate(endLongitude),
                 }
 
             }
@@ -72,11 +72,11 @@ class GeoCoordinates {
     }
 
 
-    _getDataFromCoordinate(coordinate){
-        let value ;
+    static _getDataFromCoordinate(coordinate){
+        let value;
      
-        if(this._ifExist(coordinate.direction)){
-            if(this._containsSWDirection(coordinate.direction)){
+        if(GeoCoordinates._ifExist(coordinate.direction)){
+            if(GeoCoordinates._containsSWDirection(coordinate.direction)){
                 value = parseFloat('-'+coordinate.value);
             
             }
@@ -85,7 +85,7 @@ class GeoCoordinates {
             }
         }
         else{
-            if(this._ifExist(coordinate.operator)){
+            if(GeoCoordinates._ifExist(coordinate.operator)){
                 value = parseFloat(coordinate.operator+coordinate.value);
             }
             else{
@@ -94,16 +94,16 @@ class GeoCoordinates {
             
         }
        
-     
+       
         return value;
 
        
     }
 
-    _containsSWDirection(coordinate){
+    static _containsSWDirection(coordinate){
         return /[sSWw]/.test(coordinate);
     }
-    _ifExist(value){
+    static _ifExist(value){
         return typeof value !== 'undefined';
     }
 

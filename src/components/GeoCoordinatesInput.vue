@@ -3,7 +3,7 @@
         <label class="geo-coordinates__label">
             {{title}}
         </label>
-        <input class="geo-coordinates__input" type="text" v-model="text" @change="onChange($event.target.value)">
+        <input class="geo-coordinates__input" type="text" v-model="text" @keyup="onChange($event.target.value)">
         <span v-show="error" class="geo-coordinates__error">Niepoprawnie wprowadzone współrzędne</span>
 
     </div>

@@ -2,15 +2,15 @@
   <div class="geo-distance">
     <h3>Garść informacji</h3>
       <ul class="tutorial">
-          <li class="tutorial__item">Przyjmowany typ współrzednych to (+-) wartość w stopniach oraz położenie (NS, WE)</li>
+          <li class="tutorial__item">Przyjmowany typ współrzednych to: (+-) wartość w stopniach oraz położenie (NS, WE)</li>
           <li class="tutorial__item">Przykład: <strong>+90.0, -127.554334</strong> lub <strong>90.0 N, 127.554334 W</strong></li>
           <li class="tutorial__item">(NS, WE) jest opcjonalne, można użyć samych (+-)</li>
           <li class="tutorial__item">W klasie <strong>GeoCoordinates</strong> jest kilka sposobów obliczania dystansu. <br>Opowiada za to metoda <strong>_calculateDistance()</strong><br> 
             Inne sposoby są zakomentowane.
           </li>
           <li class="tutorial__item">
-            Linki to metod obliczania <span><a href="https://www.movable-type.co.uk/scripts/latlong.html">Link 1</a>   	&nbsp;
-            <a href="https://pl.wikibooks.org/wiki/Astronomiczne_podstawy_geografii/">Link2</a>
+            Linki do metod obliczania <span><a target="_blank" href="https://www.movable-type.co.uk/scripts/latlong.html">Link 1</a>   	&nbsp;
+            <a target="_blank" href="https://pl.wikibooks.org/wiki/Astronomiczne_podstawy_geografii/Odleg%C5%82o%C5%9Bci">Link2</a>
            </span>
           </li>
 
@@ -115,13 +115,17 @@ export default {
 </script>
 
 <style lang="scss">
+body,input, textarea, button{
+  font-family: 'Poppins', sans-serif;
+}
  body{
    
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: 'Poppins', sans-serif;
+    
+      margin: 0;
       
   }
 
@@ -154,6 +158,7 @@ export default {
         border-width: 0;
         color: white;
         padding: 15px 25px;
+        font-weight: 600;
 
         &:disabled{
           background-color: #cecaca;
